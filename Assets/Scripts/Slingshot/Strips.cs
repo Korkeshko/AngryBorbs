@@ -1,26 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Strips : MonoBehaviour
 {
-    [SerializeField]
-    private Transform target;
-    private LineRenderer lineRenderer;
+    [SerializeField] private Transform target;
+    [SerializeField] private LineRenderer backlineRenderer;
+    [SerializeField] private LineRenderer frontlineRenderer;
     private int pointCount = 2;
     private int startPoint = 0;
-    private int endPoint = 1;
+    private int endPoint = 1;  
 
-
-    private void Awake()
+    private void Start() // Awaike() --
     {
-        lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.positionCount = pointCount;
-        lineRenderer.SetPosition(startPoint, transform.position);
+        backlineRenderer.positionCount = pointCount;
+        backlineRenderer.SetPosition(startPoint, backlineRenderer.transform.position);
+  
+        frontlineRenderer.positionCount = pointCount;
+        frontlineRenderer.SetPosition(startPoint, frontlineRenderer.transform.position);
     }
 
     private void Update()
     {
-        lineRenderer.SetPosition(endPoint, target.position);
+        backlineRenderer.SetPosition(endPoint, target.position);
+        frontlineRenderer.SetPosition(endPoint, target.position);
     }
 }

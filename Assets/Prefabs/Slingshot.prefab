@@ -137,12 +137,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564818677920790044}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6625395ea3a40b146ba700e43e695961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2493010911926747037}
+  backlineRenderer: {fileID: 0}
+  frontlineRenderer: {fileID: 0}
 --- !u!1 &2434857379956590215
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5663471862423868414}
+  - component: {fileID: 581018344}
   m_Layer: 0
   m_Name: Strips
   m_TagString: Untagged
@@ -260,6 +263,21 @@ Transform:
   m_Father: {fileID: 7473988929407422339}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &581018344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3705629779358437796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6625395ea3a40b146ba700e43e695961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2493010911926747037}
+  backlineRenderer: {fileID: 1014337495933415874}
+  frontlineRenderer: {fileID: 5486446262189044933}
 --- !u!1 &4883988612988526787
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,12 +499,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5787917190440575579}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6625395ea3a40b146ba700e43e695961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2493010911926747037}
+  backlineRenderer: {fileID: 0}
+  frontlineRenderer: {fileID: 0}
 --- !u!1 &6054158516662695043
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +625,6 @@ MonoBehaviour:
     duration: 1
     jumpPower: 2
   power: 15
-  count: 3
+  count: 5
   shotPoint: {fileID: 1978539269719500987}
   borbSource: {fileID: 0}
